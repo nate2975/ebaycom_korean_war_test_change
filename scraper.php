@@ -4,7 +4,7 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
 $page = 1;
-$url =  "http://www.ebay.com/sch/i.html?_trksid=p5197.m570.l1313&_nkw=korean+war&_sacat=0" ;
+$url =  "http://www.ebay.com/sch/http://www.ebay.com/sch/tw%20TW428" ;
 
 while (true)
 {
@@ -105,7 +105,7 @@ while (true)
             $start = $dn->plaintext;
             $value = $dn->nextSibling()->plaintext;
             
-            //http://www.ebay.co.uk/itm/2011-VOLKSWAGEN-GOLF-S-BLUEMOTION-TDI-BLUE-HPI-CLEAR-/110915608952?pt=Automobiles_UK&hash=item19d315e178&autorefresh=true
+            //http://www.ebay.com/sch/http://www.ebay.com/sch/tw%20TW428
             if (strpos($start, "Reg. Mark:") !== false)
             {
                 $regMark = trim(str_replace("Get the Vehicle Status Report", "", $value));
