@@ -4,7 +4,7 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
 $page = 1;
-$url =  "http://www.ebay.com/sch/http://www.ebay.com/sch/tw%20TW428" ;
+$url =  "http://www.ebay.com/itm/TW-Steel-Chronograph-Black-Dial-White-Rubber-Mens-Watch-TW428-/331920109077?hash=item4d47faee15:g:7HIAAOSwtnpXmBso" ;
 
 while (true)
 {
@@ -105,7 +105,7 @@ while (true)
             $start = $dn->plaintext;
             $value = $dn->nextSibling()->plaintext;
             
-            //http://www.ebay.com/sch/http://www.ebay.com/sch/tw%20TW428
+            //http://www.ebay.com/itm/TW-Steel-Chronograph-Black-Dial-White-Rubber-Mens-Watch-TW428-/331920109077?hash=item4d47faee15:g:7HIAAOSwtnpXmBso
             if (strpos($start, "Reg. Mark:") !== false)
             {
                 $regMark = trim(str_replace("Get the Vehicle Status Report", "", $value));
